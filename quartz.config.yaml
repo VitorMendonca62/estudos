@@ -80,9 +80,14 @@ plugins:
   - source: "@quartz-community/table-of-contents"
     enabled: true
     order: 50
+    options:
+      maxDepth: 3
+      minEntries: 1      
+      collapseByDefault: false
     layout:
       position: right
       priority: 30
+      
   - source: "@quartz-community/crawl-links"
     enabled: true
     options:
@@ -111,10 +116,10 @@ plugins:
   - source: "@quartz-community/quartz-fonts"
     enabled: true
   - source: "@quartz-themes/core"
-    enabled: true
+    enabled: false
     options:
       theme: default
-      mode: both
+      mode: dark
   - source: "@quartz-community/remove-draft"
     enabled: true
   - source: "@quartz-community/explicit-publish"
@@ -162,11 +167,6 @@ plugins:
     layout:
       position: left
       priority: 50
-  - source: "@quartz-community/graph"
-    enabled: true
-    layout:
-      position: right
-      priority: 10
   - source: "@quartz-community/search"
     enabled: true
     layout:
@@ -175,11 +175,6 @@ plugins:
       group: toolbar
       groupOptions:
         grow: true
-  - source: "@quartz-community/backlinks"
-    enabled: true
-    layout:
-      position: right
-      priority: 50
   - source: "@quartz-community/article-title"
     enabled: true
     layout:
@@ -226,15 +221,6 @@ plugins:
     layout:
       position: afterBody
       priority: 10
-  - source: "@quartz-community/footer"
-    enabled: true
-    options:
-      links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
-    layout:
-      position: footer
-      priority: 50
   - source: "@quartz-community/recent-notes"
     enabled: false
   - source: "@quartz-community/spacer"
